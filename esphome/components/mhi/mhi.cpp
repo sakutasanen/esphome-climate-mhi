@@ -21,7 +21,6 @@ namespace esphome {
         const uint8_t MHI_FAN1 = 0xA0;
         const uint8_t MHI_FAN2 = 0x80;
         const uint8_t MHI_FAN3 = 0x60;
-        const uint8_t MHI_FAN4 = 0x60;
         const uint8_t MHI_HIPOWER = 0x40;
         const uint8_t MHI_ECONO = 0x00;
 
@@ -170,14 +169,13 @@ namespace esphome {
 
             // Fan speed
             switch (fanSpeed) {
-                case MHI_FAN1:
-                case MHI_FAN2: // Only to support remote feedback
+                case MHI_FAN1: // Only to support remote feedback
                     this->fan_mode = climate::CLIMATE_FAN_LOW;
                     break;
-                case MHI_FAN3:
+                case MHI_FAN2:
                     this->fan_mode = climate::CLIMATE_FAN_MEDIUM;
                     break;
-                case MHI_FAN4:
+                case MHI_FAN3:
                 case MHI_HIPOWER: // Not yet supported. Will be added when ESPHome supports it.
                     this->fan_mode = climate::CLIMATE_FAN_HIGH;
                     break;
@@ -291,10 +289,10 @@ namespace esphome {
                     fanSpeed = MHI_FAN1;
                     break;
                 case climate::CLIMATE_FAN_MEDIUM:
-                    fanSpeed = MHI_FAN3;
+                    fanSpeed = MHI_FAN2;
                     break;
                 case climate::CLIMATE_FAN_HIGH:
-                    fanSpeed = MHI_FAN4;
+                    fanSpeed = MHI_FAN3;
                     break;
                 case climate::CLIMATE_FAN_MIDDLE:
                     fanSpeed = MHI_FAN_AUTO;
