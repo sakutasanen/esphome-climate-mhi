@@ -17,33 +17,33 @@ namespace esphome {
         const uint8_t MHI_FAN = 0x04;
 
         // Fan speed
-        const uint8_t MHI_FAN_AUTO = 0x0F;
-        const uint8_t MHI_FAN1 = 0x0E;
-        const uint8_t MHI_FAN2 = 0x0D;
-        const uint8_t MHI_FAN3 = 0x0C;
-        const uint8_t MHI_FAN4 = 0x0B;
-        const uint8_t MHI_HIPOWER = 0x07;
+        const uint8_t MHI_FAN_AUTO = 0xE0;
+        const uint8_t MHI_FAN1 = 0xA0;
+        const uint8_t MHI_FAN2 = 0x80;
+        const uint8_t MHI_FAN3 = 0x60;
+        const uint8_t MHI_FAN4 = 0x60;
+        const uint8_t MHI_HIPOWER = 0x40;
         const uint8_t MHI_ECONO = 0x00;
 
         // Vertical swing
-        const uint8_t MHI_VS_SWING = 0xE0;
-        const uint8_t MHI_VS_UP = 0xC0;
-        const uint8_t MHI_VS_MUP = 0xA0;
-        const uint8_t MHI_VS_MIDDLE = 0x80;
-        const uint8_t MHI_VS_MDOWN = 0x60;
-        const uint8_t MHI_VS_DOWN = 0x40;
-        const uint8_t MHI_VS_STOP = 0x20;
+        const uint8_t MHI_VS_SWING = 0x0A;
+        const uint8_t MHI_VS_UP = 0x02;
+        const uint8_t MHI_VS_MUP = 0x18;
+        const uint8_t MHI_VS_MIDDLE = 0x10;
+        const uint8_t MHI_VS_MDOWN = 0x08;
+        const uint8_t MHI_VS_DOWN = 0x00;
+        const uint8_t MHI_VS_STOP = 0x1A;
 
         // Horizontal swing
-        const uint8_t MHI_HS_SWING = 0x0F;
-        const uint8_t MHI_HS_MIDDLE = 0x0C;
-        const uint8_t MHI_HS_LEFT = 0x0E;
-        const uint8_t MHI_HS_MLEFT = 0x0D;
-        const uint8_t MHI_HS_MRIGHT = 0x0B;
-        const uint8_t MHI_HS_RIGHT = 0x0A;
-        const uint8_t MHI_HS_STOP = 0x07;
-        const uint8_t MHI_HS_LEFTRIGHT = 0x08;
-        const uint8_t MHI_HS_RIGHTLEFT = 0x09;
+        const uint8_t MHI_HS_SWING = 0x4C;
+        const uint8_t MHI_HS_MIDDLE = 0x48;
+        const uint8_t MHI_HS_LEFT = 0xC8;
+        const uint8_t MHI_HS_MLEFT = 0x88;
+        const uint8_t MHI_HS_MRIGHT = 0x08;
+        const uint8_t MHI_HS_RIGHT = 0xC4;
+        const uint8_t MHI_HS_STOP = 0xCC;
+        const uint8_t MHI_HS_LEFTRIGHT = 0x84;
+        const uint8_t MHI_HS_RIGHTLEFT = 0x44;
 
         // Only available in Auto, Cool and Heat mode
         const uint8_t MHI_3DAUTO_ON = 0x00;
